@@ -34,9 +34,10 @@
 
 5.重启完毕，然后把 /etc/mysql/ca.pem 传到你节点上 ssr mod 的目录下，我这里以 /root/shadowsocks 为例。
 
-6.然后设置 userapiconfig.py 添加如下两行
+6.然后设置 userapiconfig.py 添加或者设置如下两行
 
 > `MYSQL_SSL_ENABLE = 0`
+
 > `MYSQL_SSL_CA = '/root/shadowsocks/ca.pam'`
 
 重启节点上的程序，搞定。
