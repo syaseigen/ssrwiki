@@ -34,6 +34,17 @@
 
 5.重启完毕，然后把 /etc/mysql/ 的 client-cert.pem 和 client-key.pem 和 ca.pem 传到你节点上 ssr mod 的目录下，我这里以 /root/shadowsocks 为例。
 
+6.添加信任证书
+
+> `yum install ca-certificates`
+
+> `update-ca-trust force-enable`
+
+> `cp ca.pem /etc/pki/ca-trust/source/anchors/ssr.pem`
+
+> `update-ca-trust extract`
+
+
 6.然后设置 userapiconfig.py 添加或者设置如下
 
 > `MYSQL_SSL_ENABLE = 1`
