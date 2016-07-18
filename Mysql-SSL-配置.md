@@ -32,15 +32,17 @@
 
 > `sevrice mysql restart`
 
-5.重启完毕，然后把 /etc/mysql/ 的 client-cert.pem 和 client-key.pem 传到你节点上 ssr mod 的目录下，我这里以 /root/shadowsocks 为例。
+5.重启完毕，然后把 /etc/mysql/ 的 client-cert.pem 和 client-key.pem 和 ca.pem 传到你节点上 ssr mod 的目录下，我这里以 /root/shadowsocks 为例。
 
-6.然后设置 userapiconfig.py 添加或者设置如下两行
+6.然后设置 userapiconfig.py 添加或者设置如下
 
 > `MYSQL_SSL_ENABLE = 1`
 
 > `MYSQL_SSL_CERT = '/root/shadowsocks/client-cert.pem'`
 
 > `MYSQL_SSL_KEY = '/root/shadowsocks/client-key.pem'`
+
+> `MYSQL_SSL_CA = '/root/shadowsocks/ca.pem'`
 
 
 重启节点上的程序，搞定。
