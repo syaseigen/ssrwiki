@@ -27,7 +27,9 @@
 3.然后设置 my.cnf 添加
 
 > `ssl-ca=/etc/mysql/ca.pem`
+
 > `ssl-cert=/etc/mysql/server-cert.pem`
+
 > `ssl-key=/etc/mysql/server-key.pem`
 
 4.添加完成，重启 mysql
