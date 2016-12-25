@@ -24,7 +24,7 @@
 
 的方法，生成在 /etc/mysql/ 下。
 
-3.然后设置 my.cnf 添加
+3.然后设置 my.cnf 的 [mysqld] 段添加
 
 > `ssl-ca=/etc/mysql/ca.pem`
 
